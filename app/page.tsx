@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import LoadingScreen from "@/components/loading-screen"
 import VerificationScreen from "@/components/verification-screen"
 import Dashboard from "@/components/dashboard"
+import AudioManager from "@/components/audio-manager"
 import PermissionNotification from "@/components/permission-notification"
 
 export default function Home() {
@@ -38,11 +39,14 @@ export default function Home() {
 
       {/* Background Video */}
       <video autoPlay loop muted className="fixed inset-0 w-full h-full object-cover z-0">
-        <source src="https://files.catbox.moe/kvnlgf.mp4" type="video/mp4" />
+        <source src="/video/background.mp4" type="video/mp4" />
       </video>
 
       {/* Dark Overlay */}
       <div className="fixed inset-0 bg-black/70 z-10" />
+
+      {/* Audio Manager - INI YANG HILANG! */}
+      <AudioManager />
 
       {/* Content */}
       <div className={`relative z-20 ${showPermissionBar ? "pt-16 md:pt-20" : ""}`}>
